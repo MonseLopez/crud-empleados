@@ -1,5 +1,7 @@
 from flask import render_template, request, redirect, url_for, jsonify
-from .models import Empleado
+# En routes/empleados.py
+from models.empleado import Empleado  # Importación directa desde models
+
 from . import db
 
 # Ruta para mostrar todos los empleados
