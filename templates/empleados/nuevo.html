@@ -1,0 +1,35 @@
+<!-- templates/empleados/nuevo.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Empleado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <h1>Nuevo Empleado</h1>
+    <form id="formEmpleado">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+
+        <label for="rfc">RFC:</label>
+        <input type="text" name="rfc" id="rfc" placeholder="RFC" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" name="telefono" id="telefono" placeholder="Teléfono" required>
+
+        <label for="cp">Código Postal:</label>
+        <input type="text" name="cp" id="cp" placeholder="Código Postal" required>
+
+        <!-- Otros campos si es necesario -->
+
+        <button type="submit">Guardar</button>
+    </form>
+
+    <div id="mensaje"></div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+from models.database import db
+
+class Empleado(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    nombre = db.Column(db.String(100), nullable=False)
+    apellidos = db.Column(db.String(100), nullable=False)
+    rfc = db.Column(db.String(13), unique=True, nullable=False)
+    telefono = db.Column(db.String(15), nullable=False)
+    cp = db.Column(db.String(5), nullable=False)
+    estado = db.Column(db.String(50), nullable=False)
+    colonia = db.Column(db.String(100), nullable=False)
+    calle = db.Column(db.String(100), nullable=False)
+    sexo = db.Column(db.String(10), nullable=False)
+    genero = db.Column(db.String(50), nullable=False)
+    area_trabajo = db.Column(db.String(100), nullable=False)
+    turno = db.Column(db.String(50), nullable=False)
+    tipo_empleado = db.Column(db.String(50), nullable=False)
+    estatus = db.Column(db.String(20), nullable=False)
+    cuenta_bancaria = db.Column(db.String(20), unique=True, nullable=False)
+    clave_interbancaria = db.Column(db.String(18), unique=True, nullable=False)
+    no_nomina = db.Column(db.String(10), unique=True, nullable=False)

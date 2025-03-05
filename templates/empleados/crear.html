@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Empleado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <h1>Crear Empleado</h1>
+    <form id="formEmpleadoCrear">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required>
+
+        <label for="rfc">RFC:</label>
+        <input type="text" name="rfc" id="rfc" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" name="telefono" id="telefono" required>
+
+        <label for="cp">Código Postal:</label>
+        <input type="text" name="cp" id="cp" required>
+
+        <label for="genero">Género:</label>
+        <select name="genero" id="genero" required>
+            <option value="">Seleccione...</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select>
+
+        <label for="areaTrabajo">Área de Trabajo:</label>
+        <input type="text" name="areaTrabajo" id="areaTrabajo" required>
+
+        <!-- Otros campos de datos laborales si es necesario -->
+
+        <button type="submit">Crear Empleado</button>
+    </form>
+
+    <div id="mensaje"></div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

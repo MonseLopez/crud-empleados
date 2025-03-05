@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Empleados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <h1>Lista de Empleados</h1>
+
+    <!-- Contenedor para mensajes de éxito o error -->
+    <div id="mensaje" style="display: none; padding: 10px; margin-bottom: 20px; font-weight: bold;"></div>
+
+    <ul id="empleados-lista">
+        {% for empleado in empleados %}
+            <li id="empleado-{{ empleado.id }}">
+                {{ empleado.nombre }} {{ empleado.apellidos }} - {{ empleado.rfc }}
+                <button class="eliminar-btn" data-id="{{ empleado.id }}">Eliminar</button>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
