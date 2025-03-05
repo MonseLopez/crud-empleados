@@ -6,6 +6,8 @@ from routes.empleados import empleados_bp
 
 def create_app():
     app = Flask(__name__)
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+    db = SQLAlchemy(app)
     app.config.from_object(Config)
     db.init_app(app)
 
